@@ -4,31 +4,31 @@ import { AppHeading } from "../components/AppHeading";
 import { AppVAI } from "../components/AppVAI";
 import { AppLinkBtn } from "../components/AppLinkBtn";
 
-const VariantData = [
-  {
-    id: "variant-1",
-    text: "Ваш ответ",
-  },
-  {
-    id: "variant-2",
-    text: "Ваш ответ",
-  },
-  {
-    id: "variant-3",
-    text: "Ваш ответ",
-  },
-  {
-    id: "variant-4",
-    text: "Ваш ответ",
-  },
-];
-
 export const StepTwo = () => {
+  const VariantData = [
+    {
+      id: "variant-1",
+      text: "Ваш ответ",
+    },
+    {
+      id: "variant-2",
+      text: "Ваш ответ",
+    },
+    {
+      id: "variant-3",
+      text: "Ваш ответ",
+    },
+    {
+      id: "variant-4",
+      text: "Ваш ответ",
+    },
+  ];
+
   return (
     <div className="container">
       <div className="wrapper">
         <div className="variants-quiz">
-          <AppIndicator currentStep={2}/>
+          <AppIndicator currentStep={2} />
           <div className="question">
             <AppHeading
               headingText={"2. Занимательный вопрос"}
@@ -37,10 +37,10 @@ export const StepTwo = () => {
             <ul className="variants">
               {VariantData &&
                 VariantData.map((elem) => (
-                  <AppVAI id={elem.id} variantText={elem.text} />
+                  <AppVAI id={elem.id} text={elem.text} />
                 ))}
             </ul>
-            <AppLinkBtn path="/step-three"/>
+            <AppLinkBtn path="/step-three" />
           </div>
         </div>
       </div>

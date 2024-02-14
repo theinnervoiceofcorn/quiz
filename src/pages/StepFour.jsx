@@ -1,38 +1,50 @@
 import React from "react";
 import { AppIndicator } from "../components/AppIndicator";
+import { AppHeading } from "../components/AppHeading";
+import { AppVAI } from "../components/AppVAI";
 import { AppLinkBtn } from "../components/AppLinkBtn";
 
 export const StepFour = () => {
+  const VariantData = [
+    {
+      id: "variant-1",
+      text: "1",
+    },
+    {
+      id: "variant-2",
+      text: "2",
+    },
+    {
+      id: "variant-3",
+      text: "3",
+    },
+    {
+      id: "variant-4",
+      text: "4",
+    },
+    {
+      id: "variant-5",
+      text: "5",
+    },
+  ];
+
   return (
     <div className="container">
       <div className="wrapper">
         <div className="emoji-quiz">
-          <AppIndicator currentStep={4}/>
+          <AppIndicator currentStep={4} />
           <div className="question">
-            <h2>4. Занимательный вопрос</h2>
+            <AppHeading
+              headingText={"4. Занимательный вопрос"}
+              headingType={"h2"}
+            />
             <ul className="level-variants">
-              <li className="variant-wrapper">
-                <input required type="radio" name="variant" id="variant-1" />
-                <label htmlFor="variant-1">1</label>
-              </li>
-              <li className="variant-wrapper">
-                <input required type="radio" name="variant" id="variant-2" />
-                <label htmlFor="variant-2">2</label>
-              </li>
-              <li className="variant-wrapper">
-                <input required type="radio" name="variant" id="variant-3" />
-                <label htmlFor="variant-3">3</label>
-              </li>
-              <li className="variant-wrapper">
-                <input required type="radio" name="variant" id="variant-4" />
-                <label htmlFor="variant-4">4</label>
-              </li>
-              <li className="variant-wrapper">
-                <input required type="radio" name="variant" id="variant-5" />
-                <label htmlFor="variant-5">5</label>
-              </li>
+              {VariantData &&
+                VariantData.map((elem) => (
+                  <AppVAI id={elem.id} text={elem.text}/>
+                ))}
             </ul>
-            <AppLinkBtn path="/thanks"/>
+            <AppLinkBtn path="/thanks" />
           </div>
         </div>
       </div>
