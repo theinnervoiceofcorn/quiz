@@ -10,6 +10,8 @@ import { Thanks } from "./pages/Thanks";
 
 export const App = () => {
 
+  // auto deploy test
+
   const routerConfig = createBrowserRouter([
     {
       path: "/",
