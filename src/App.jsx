@@ -13,7 +13,6 @@ export const App = () => {
   // auto deploy test
   // auto deploy test #2
   // auto deploy test #3
-  // auto deploy test #4
 
   const routerConfig = createBrowserRouter([
     {
